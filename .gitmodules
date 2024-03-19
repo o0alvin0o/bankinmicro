@@ -1,0 +1,3 @@
+[submodule "usermanagement"]
+	path = usermanagement
+	url = git@github.com:o0alvin0o/usermanagement.git
