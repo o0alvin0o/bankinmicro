@@ -1,10 +1,21 @@
 version: '3.8'
 services:
+# Database
   usermanagement:
     image: postgres:16.2
     restart: always
     ports:
       - '15432:5432'
+    environment:
+      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_USER: admin
+      POSTGRES_DB: bankdb
+
+  customerservice:
+    image: postgres:16.2
+    restart: always
+    ports:
+      - '15433:5432'
     environment:
       POSTGRES_PASSWORD: strongpassword
       POSTGRES_USER: admin
